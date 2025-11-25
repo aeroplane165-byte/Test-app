@@ -21,7 +21,7 @@ jobs:
 
       - name: Unzip the file
         run: |
-          ZIP="download (1).zip"
+          ZIP="app.zip"
           if [ -f "$ZIP" ]; then
             mkdir -p extracted
             unzip -o "$ZIP" -d extracted
@@ -36,7 +36,7 @@ jobs:
           rm -rf extracted
 
       - name: Remove the zip file
-        run: rm -f "download (1).zip"
+        run: rm -f "app.zip"
 
       - name: Commit and push
         run: |
@@ -46,6 +46,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Extracted download (1).zip via workflow"
+            git commit -m "Extracted app.zip via workflow"
             git push
           fi
