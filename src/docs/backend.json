@@ -1,0 +1,306 @@
+
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user in the Local Buddy Pro application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user (matches auth.uid)."
+        },
+        "name": {
+          "type": "string",
+          "description": "The user's full name."
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "URL of the user's profile photo.",
+          "format": "uri"
+        },
+        "location": {
+          "type": "string",
+          "description": "The user's location (e.g., city, state)."
+        },
+        "walletBalance": {
+          "type": "number",
+          "description": "The user's current wallet balance."
+        },
+        "xp": {
+          "type": "number",
+          "description": "The user's experience points."
+        },
+        "level": {
+          "type": "string",
+          "description": "The user's current level (e.g., Rookie, Pro, Local Hero)."
+        },
+        "verificationStatus": {
+          "type": "string",
+          "description": "The user's verification status (e.g., pending, verified)."
+        },
+        "mobileVerified": {
+          "type": "boolean",
+          "description": "Indicates if the user's mobile number is verified."
+        },
+        "aadharVerified": {
+          "type": "boolean",
+          "description": "Indicates if the user's Aadhar/ID is verified."
+        },
+        "joinDate": {
+          "type": "string",
+          "description": "The date the user joined the platform.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "walletBalance"
+      ]
+    },
+    "Task": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Task",
+      "type": "object",
+      "description": "Represents a task posted on the Local Buddy Pro platform.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the task."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the task."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the task."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the task (e.g., Household, Tech, Delivery)."
+        },
+        "budget": {
+          "type": "number",
+          "description": "The budget allocated for the task."
+        },
+        "location": {
+          "type": "string",
+          "description": "The location where the task needs to be performed."
+        },
+        "status": {
+          "type": "string",
+          "description": "The current status of the task (e.g., Open, Assigned, Completed)."
+        },
+        "posterId": {
+          "type": "string",
+          "description": "Reference to User who posted the task."
+        },
+        "buddyId": {
+          "type": "string",
+          "description": "Reference to User who is assigned to the task."
+        },
+        "deadline": {
+          "type": "string",
+          "description": "The deadline for the task completion.",
+          "format": "date-time"
+        },
+        "paymentMode": {
+            "type": "string",
+            "enum": ["online", "cash"],
+            "description": "The mode of payment for the task."
+        },
+        "duration": {
+            "type": "string",
+            "description": "Estimated time duration to complete the task."
+        },
+        "tip": {
+            "type": "number",
+            "description": "Optional tip amount for the buddy."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "posterId",
+        "budget",
+        "status",
+        "paymentMode",
+        "duration"
+      ]
+    },
+    "Chat": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Chat",
+      "type": "object",
+      "description": "Represents a chat session between a poster and a buddy for a specific task.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the chat session."
+        },
+        "taskId": {
+          "type": "string",
+          "description": "Reference to Task that this chat is associated with."
+        },
+        "participantIds": {
+          "type": "array",
+          "description": "Array of user IDs participating in the chat.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "description": "Array of messages in the chat session.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "senderId": { "type": "string" },
+              "text": { "type": "string" },
+              "timestamp": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      },
+      "required": [
+        "id",
+        "taskId",
+        "participantIds"
+      ]
+    },
+    "Transaction": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Transaction",
+      "type": "object",
+      "description": "Represents a transaction record (Lock, Release, Add, Withdraw).",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the transaction."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User that initiated the transaction."
+        },
+        "taskId": {
+          "type": "string",
+          "description": "Reference to Task that the transaction is for (if applicable)."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of transaction (e.g., Lock, Release, Add, Withdraw)."
+        },
+        "amount": {
+          "type": "number",
+          "description": "The amount involved in the transaction."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the transaction (e.g., Success, Pending, Failed)."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "The timestamp of the transaction.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "type",
+        "amount",
+        "status",
+        "timestamp"
+      ]
+    },
+    "Notification": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Notification",
+      "type": "object",
+      "description": "Represents a notification for a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the notification."
+        },
+        "userId": {
+          "type": "string",
+          "description": "The ID of the user who this notification is for."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the notification."
+        },
+        "message": {
+          "type": "string",
+          "description": "The main content of the notification."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["TASK_ACCEPTED", "PAYMENT_RELEASED", "NEW_MESSAGE"],
+          "description": "The type of the notification."
+        },
+        "taskId": {
+          "type": "string",
+          "description": "The ID of the task related to this notification, if any."
+        },
+        "isRead": {
+          "type": "boolean",
+          "description": "Whether the user has read the notification."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the notification was created."
+        }
+      },
+      "required": ["id", "userId", "title", "message", "type", "isRead", "timestamp"]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous",
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "paths": {
+      "/users/{userId}": {
+        "schema": {
+          "$ref": "#/entities/User"
+        },
+        "description": "Stores user profiles. Uses path-based ownership for private user data."
+      },
+       "/users/{userId}/notifications/{notificationId}": {
+        "schema": {
+          "$ref": "#/entities/Notification"
+        },
+        "description": "Stores notifications for a specific user. Path-based ownership ensures privacy."
+      },
+      "/tasks/{taskId}": {
+        "schema": {
+          "$ref": "#/entities/Task"
+        },
+        "description": "Stores tasks posted on the platform. Includes 'posterId' to associate the task with the user who posted it, as well as 'buddyId' to save the user assigned to the task."
+      },
+      "/chats/{chatId}": {
+        "schema": {
+          "$ref": "#/entities/Chat"
+        },
+        "description": "Stores chat sessions between users for specific tasks. Includes 'taskId' and a list of participantIds to secure the chat."
+      },
+      "/transactions/{transactionId}": {
+        "schema": {
+          "$ref": "#/entities/Transaction"
+        },
+        "description": "Stores transaction records related to wallet operations. Includes 'userId' and 'taskId' to track user and task associations."
+      }
+    }
+  }
+}
+
+    

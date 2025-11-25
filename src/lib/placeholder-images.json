@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user1",
+      "description": "Avatar of Sarah",
+      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MzgzNjUwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user2",
+      "description": "Avatar of Mike",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4MDkyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user3",
+      "description": "Avatar of Jenny",
+      "imageUrl": "https://images.unsplash.com/photo-1711645169736-53327e726205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzYzODE0MjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "user4",
+      "description": "Avatar of David",
+      "imageUrl": "https://images.unsplash.com/photo-1714356333088-45a9ba618365?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwZ2xhc3Nlc3xlbnwwfHx8fDE3NjM4NDY4NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man glasses"
+    },
+    {
+      "id": "user5",
+      "description": "Avatar of a user",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "story1",
+      "description": "Urgent task highlight",
+      "imageUrl": "https://images.unsplash.com/photo-1762805080882-84c2d3855963?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1cmdlbnQlMjBhbGVydHxlbnwwfHx8fDE3NjM4NjI2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urgent alert"
+    },
+    {
+      "id": "story2",
+      "description": "Top buddies highlight",
+      "imageUrl": "https://images.unsplash.com/photo-1581094273788-cba84678c0a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWFtd29yayUyMHN1Y2Nlc3N8ZW58MHx8fHwxNzYzODYyNjg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teamwork success"
+    },
+    {
+      "id": "story3",
+      "description": "Safety tips highlight",
+      "imageUrl": "https://images.unsplash.com/photo-1623906841898-d6a7dc0204f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzYWZldHklMjBzaGllbGR8ZW58MHx8fHwxNzYzODYyNjg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "safety shield"
+    },
+    {
+      "id": "task_household",
+      "description": "A clean living room",
+      "imageUrl": "https://images.unsplash.com/photo-1576697133123-675aa93f3e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGxpdmluZ3Jvb218ZW58MHx8fHwxNzYzNzc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean livingroom"
+    },
+    {
+      "id": "task_tech",
+      "description": "A person repairing a laptop",
+      "imageUrl": "https://images.unsplash.com/photo-1658240527554-9cf987b4de49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjByZXBhaXJ8ZW58MHx8fHwxNzYzODYyNjg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop repair"
+    },
+    {
+      "id": "task_delivery",
+      "description": "A delivery package",
+      "imageUrl": "https://images.unsplash.com/photo-1758523670564-d1d6a734dc0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZWxpdmVyeSUyMHBhY2thZ2V8ZW58MHx8fHwxNzYzODI3NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delivery package"
+    },
+    {
+      "id": "task_tutor",
+      "description": "A person tutoring a student",
+      "imageUrl": "https://images.unsplash.com/photo-1629360057380-18b15b42e650?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0dXRvcmluZyUyMHN0dWRlbnR8ZW58MHx8fHwxNzYzODI2MjM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tutoring student"
+    },
+    {
+      "id": "task_cleaning",
+      "description": "Cleaning supplies",
+      "imageUrl": "https://images.unsplash.com/photo-1583947215259-38e31be8751f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGVhbmluZyUyMHN1cHBsaWVzfGVufDB8fHx8MTc2Mzg2MDg1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cleaning supplies"
+    },
+    {
+      "id": "profile_hero",
+      "description": "Profile hero background",
+      "imageUrl": "https://images.unsplash.com/photo-1604076913837-52ab5629fba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMGdyYWRpZW50fGVufDB8fHx8MTc2Mzg1OTk1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract gradient"
+    }
+  ]
+}
