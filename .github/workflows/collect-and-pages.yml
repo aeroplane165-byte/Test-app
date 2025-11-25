@@ -12,16 +12,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Collect all web files from all folders into /docs
+      # Collect all web files from all folders into /docs (with directory structure)
       - name: Collect web files to /docs
         run: |
           mkdir -p docs
           find . -type f \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" -o -iname "*.ts" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.svg" \) \
             -not -path "./docs/*" -not -path "./.git/*" \
             -exec cp --parents "{}" docs/ \;
-          # Move all files inside docs to root of docs, flatten folder structure
-          find docs -type f -exec mv {} docs/ \;
-          find docs -mindepth 1 -type d -empty -delete
 
       # Deploy using GitHub Pages
       - name: Deploy site
