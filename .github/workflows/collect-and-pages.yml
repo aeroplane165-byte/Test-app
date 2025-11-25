@@ -1,0 +1,31 @@
+name: Collect & Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Collect all web files from all folders into /docs
+      - name: Collect web files to /docs
+        run: |
+          mkdir -p docs
+          find . -type f \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" -o -iname "*.ts" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.svg" \) \
+            -not -path "./docs/*" -not -path "./.git/*" \
+            -exec cp --parents "{}" docs/ \;
+          # Move all files inside docs to root of docs, flatten folder structure
+          find docs -type f -exec mv {} docs/ \;
+          find docs -mindepth 1 -type d -empty -delete
+
+      # Deploy using GitHub Pages
+      - name: Deploy site
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
